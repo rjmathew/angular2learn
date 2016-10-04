@@ -7,8 +7,8 @@
   <button (click)="changeColor()">Change color</button>
   <input type="text" [value]="name" (blur)="name= $event.target.value">
 <ul>
-  <li *ngFor="let customer of customers">
-    {{customer.name}}
+  <li *ngFor="let c of customers">
+   <app-customer [customer]="c"></app-customer>
   </li>
 </ul>
 
