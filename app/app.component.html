@@ -1,7 +1,15 @@
 <h1>My Second Angular 2 App
-  - from
+  {{title}}
   <div [style.color]="testColor">
-    {{title}}
+    Hello {{name}}
+    <input type="text" [(ngModel)] = "name">
   </div>
   <button (click)="changeColor()">Change color</button>
+  <input type="text" [value]="name" (blur)="name= $event.target.value">
+<ul>
+  <li *ngFor="let customer of customers">
+    {{customer.name}}
+  </li>
+</ul>
+
 </h1>
